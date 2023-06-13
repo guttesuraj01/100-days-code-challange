@@ -26,28 +26,33 @@ scissors = '''
 '''
 
 #Code is below
+
 import random 
 
-random_values = [rock, paper, scissors]
-input = input('choose on out of rock / paper / siccors')
-print(input)
-computer_variable = random.choice(random_values)
+values = [rock, paper, scissors]
+
+user_input = int(input("Select 0 for rock, 1 for paper, 2 for sissors  "))
+x = values[user_input]
+print(x)
+     
+
+computer_variable = random.choice(values)
 print('Computer choose',computer_variable)
 
-# if input == rock & computer_variable == rock:
-#     print('Draw Try Again', input)
-# elif input == rock & computer_variable == paper:
-#     print("You Loose")
-# elif input == rock & computer_variable == scissors:
-#     print("You Won")
+if user_input == 0 & computer_variable == values[0]:
+    print("Draw")
+elif input == values[0] & computer_variable == values[1]:
+    print("You Loose")
+elif input == values[0] & computer_variable == values[2]:
+    print("You Won")
 # elif input == paper & computer_variable == rock:
 #     print("You Won")
 # elif input == paper & computer_variable == paper:
 #     print("Draw try again")
 # elif input == paper & computer_variable == scissors:
 #     print("you Won")
-# else:
-#     print("Kuch to gadbad hai")
+else:
+    print("Kuch to gadbad hai")
 
 # x = print("Want to try again y/n")
 
